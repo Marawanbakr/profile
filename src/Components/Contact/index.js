@@ -1,24 +1,40 @@
 import React from "react";
-import "./style.css";
+import Footer from './../Footer'
+import{
+  ContactSection,
+  ContactTitle,
+  Span,
+  Form,
+  FormInput,
+  InputText,
+  InputEmail,
+  InputExp,
+  TextArea,
+  InputSupmit,
+} from "./style.js";
+
 
 const Contact = () => {
   return (
-    <div className="drop">
+  <React.Fragment>
+      <ContactSection>
       <div className="container">
-        <h2 className="drop-title">
-          <span>Drop </span>Me A line
-        </h2>
-        <form action="">
-          <div className="form-input">
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
-          </div>
-          <input type="text" className="sub" placeholder="Your Subject" />
-          <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
-          <input type="submit" value="Send Message" />
-        </form>
+        <ContactTitle>
+          <Span>Drop </Span>Me A line
+        </ContactTitle>
+        <Form action="">
+          <FormInput>
+            <InputText type="text" placeholder="Your Name" />
+            <InputEmail type="email" placeholder="Your Email" />
+          </FormInput>
+          <InputExp type="text" className="sub" placeholder="Your Subject" />
+          <TextArea cols="30" rows="10" placeholder="Your Message"></TextArea>
+          <InputSupmit type="submit" value="Send Message" />
+        </Form>
       </div>
-    </div>
+    </ContactSection>
+    <Footer />
+  </React.Fragment>
   );
 };
 
